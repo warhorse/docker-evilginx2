@@ -1,4 +1,4 @@
-# [warhorse/evilginx2](https://github.com/warhorse/docker-evilginx2)
+# [warhorse/evilginx2](https://github.com/war-horse/docker-evilginx2)
 [![GitHub Release](https://img.shields.io/github/release/war-horse/docker-evilginx2.svg?style=flat-square&color=E68523)](https://github.com/war-horse/docker-evilginx2/releases)
 [![MicroBadger Layers](https://img.shields.io/microbadger/layers/warhorse/evilginx2.svg?style=flat-square&color=E68523)](https://microbadger.com/images/warhorse/evilginx2 "Get your own version badge on microbadger.com")
 [![MicroBadger Size](https://img.shields.io/microbadger/image-size/warhorse/evilginx2.svg?style=flat-square&color=E68523)](https://microbadger.com/images/warhorse/evilginx2 "Get your own version badge on microbadger.com")
