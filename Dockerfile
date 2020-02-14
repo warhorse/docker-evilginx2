@@ -18,8 +18,11 @@ RUN set -ex \
         && cd ${PROJECT_DIR}/ && go get ./... && make \
 		&& cp ${PROJECT_DIR}/bin/evilginx ${EVILGINX_BIN} \
 		&& apk del ${INSTALL_PACKAGES} && rm -rf /var/cache/apk/* && rm -rf ${GOPATH}/src/*
+
+COPY ./docker-entrypoint.sh /opt/
+RUN chmod +x /opt/docker-entrypoint.sh
 		
-CMD ["docker-entrypoint.sh"]
+ENTRYPOINT ["/opt/docker-entrypoint.sh"]
 
 STOPSIGNAL SIGKILL
 
