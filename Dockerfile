@@ -23,6 +23,7 @@ COPY ./docker-entrypoint.sh /opt/
 RUN chmod +x /opt/docker-entrypoint.sh
 		
 ENTRYPOINT ["/opt/docker-entrypoint.sh"]
+EXPOSE 443
 
 STOPSIGNAL SIGKILL
 
