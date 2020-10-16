@@ -8,7 +8,7 @@ ENV EVILGINX_BIN="/bin/evilginx"
 
 ARG BUILD_RFC3339="1970-01-01T00:00:00Z"
 ARG COMMIT="local"
-ARG VERSION="v2.3.2"
+ARG VERSION="v2.4.0"
 
 RUN mkdir -p ${GOPATH}/src/github.com/${GITHUB_USER} \
     && apk add --no-cache ${INSTALL_PACKAGES} \
