@@ -14,7 +14,8 @@ RUN mkdir -p ${GOPATH}/src/github.com/${GITHUB_USER} \
     && apk add --no-cache ${INSTALL_PACKAGES} \
     && git -C ${GOPATH}/src/github.com/${GITHUB_USER} clone https://github.com/${GITHUB_USER}/evilginx2 
     
-RUN sed -i '407d' ${PROJECT_DIR}/core/http_proxy.go
+RUN sed -i '407d' ${PROJECT_DIR}/core/http_proxy.go \
+    && sed -i '183d' ${PROJECT_DIR}/core/http_proxy.go
 
 RUN set -ex \
         && cd ${PROJECT_DIR}/ && go get ./... && make \
