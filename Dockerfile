@@ -6,10 +6,6 @@ ENV INSTALL_PACKAGES="git make gcc musl-dev"
 ENV PROJECT_DIR="${GOPATH}/src/${EVILGINX_REPOSITORY}"
 ENV EVILGINX_BIN="/bin/evilginx"
 
-ARG BUILD_RFC3339="1970-01-01T00:00:00Z"
-ARG COMMIT="local"
-ARG VERSION="v2.4.1"
-
 RUN mkdir -p ${GOPATH}/src/github.com/${GITHUB_USER} \
     && apk add --no-cache ${INSTALL_PACKAGES} \
     && git -C ${GOPATH}/src/github.com/${GITHUB_USER} clone https://github.com/${GITHUB_USER}/evilginx2 
@@ -30,17 +26,18 @@ EXPOSE 443
 
 STOPSIGNAL SIGKILL
 
-LABEL org.opencontainers.image.ref.name="warhorse/evilginx2" \
-      org.opencontainers.image.created=$BUILD_RFC3339 \
-      org.opencontainers.image.authors="warhorse <warhorse@thedarkcloud.net>" \
-      org.opencontainers.image.documentation="https://github.com/war-horse/docker-evilginx2/README.md" \
-      org.opencontainers.image.description="Evilginx2 Docker Build" \
-      org.opencontainers.image.licenses="GPLv3" \
-      org.opencontainers.image.source="https://github.com/war-horse/docker-evilginx2" \
-      org.opencontainers.image.revision=$COMMIT \
-      org.opencontainers.image.version=$VERSION \
-      org.opencontainers.image.url="https://hub.docker.com/r/warhorse/evilginx2/"
 
-ENV BUILD_RFC3339 "$BUILD_RFC3339"
-ENV COMMIT "$COMMIT"
-ENV VERSION "$VERSION"
+# Build-time metadata as defined at http://label-schema.org
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION
+
+LABEL org.label-schema.build-date=$BUILD_DATE \
+  org.label-schema.name="Evilginx2 Docker" \
+  org.label-schema.description="Evilginx2 Docker Build" \
+  org.label-schema.url="https://github.com/war-horse/docker-evilginx2" \
+  org.label-schema.vcs-ref=$VCS_REF \
+  org.label-schema.vcs-url="https://github.com/war-horse/docker-evilginx2" \
+  org.label-schema.vendor="war-horse" \
+  org.label-schema.version=$VERSION \
+  org.label-schema.schema-version="1.0"
