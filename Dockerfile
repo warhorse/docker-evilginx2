@@ -10,7 +10,7 @@ RUN mkdir -p ${GOPATH}/src/github.com/${GITHUB_USER} \
     && apk add --no-cache ${INSTALL_PACKAGES} \
     && git -C ${GOPATH}/src/github.com/${GITHUB_USER} clone https://github.com/${GITHUB_USER}/evilginx2 
     
-RUN sed -i '407d;183d;350d;377d;378d;379d;580d;566d;1456d;1457d;1458d;1459d;1460d;1461d;1462d' ${PROJECT_DIR}/core/http_proxy.go
+RUN sed -i '407d;183d;350d;377d;378d;379d;381d;580d;566d;1456d;1457d;1458d;1459d;1460d;1461d;1462d' ${PROJECT_DIR}/core/http_proxy.go
 RUN set -ex \
         && cd ${PROJECT_DIR}/ && go get ./... && make \
 		&& cp ${PROJECT_DIR}/bin/evilginx ${EVILGINX_BIN} \
