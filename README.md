@@ -1,5 +1,6 @@
 # [warhorse/docker-evilginx2](https://github.com/war-horse/docker-evilginx2)
-[![GitHub Release](https://img.shields.io/github/release/war-horse/docker-evilginx2.svg?style=flat-square&color=E68523)](https://github.com/war-horse/docker-evilginx2/releases)
+
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/warhorse/docker-evilginx2)
 [![CI](https://github.com/warhorse/docker-evilginx2/workflows/Docker/badge.svg?event=push)](https://github.com/warhorse/docker-evilginx2/actions?query=workflow%3ADocker)
 ![License](https://img.shields.io/github/license/warhorse/docker-evilginx2)
 ![Commit](https://img.shields.io/github/last-commit/warhorse/docker-evilginx2)
