@@ -1,9 +1,8 @@
-# [warhorse/evilginx2](https://github.com/war-horse/docker-evilginx2)
+# [warhorse/docker-evilginx2](https://github.com/war-horse/docker-evilginx2)
 [![GitHub Release](https://img.shields.io/github/release/war-horse/docker-evilginx2.svg?style=flat-square&color=E68523)](https://github.com/war-horse/docker-evilginx2/releases)
-[![MicroBadger Layers](https://img.shields.io/microbadger/layers/warhorse/evilginx2.svg?style=flat-square&color=E68523)](https://microbadger.com/images/warhorse/evilginx2 "Get your own version badge on microbadger.com")
-[![MicroBadger Size](https://img.shields.io/microbadger/image-size/warhorse/evilginx2.svg?style=flat-square&color=E68523)](https://microbadger.com/images/warhorse/evilginx2 "Get your own version badge on microbadger.com")
-[![Docker Pulls](https://img.shields.io/docker/pulls/warhorse/evilginx2.svg?style=flat-square&color=E68523)](https://hub.docker.com/r/warhorse/evilginx2)
-[![Docker Stars](https://img.shields.io/docker/stars/warhorse/evilginx2.svg?style=flat-square&color=E68523)](https://hub.docker.com/r/warhorse/evilginx2)
+[![CI](https://github.com/warhorse/docker-evilginx2/workflows/CI/badge.svg?event=push)](https://github.com/warhorse/docker-evilginx2/actions?query=workflow%3ACI)
+![License](https://img.shields.io/github/license/warhorse/docker-evilginx2)
+![Commit](https://img.shields.io/github/last-commit/warhorse/docker-evilginx2)
 
 [Evilginx2](https://github.com/kgretzky/evilginx2) - Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication
 
