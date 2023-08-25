@@ -2,7 +2,7 @@ FROM golang:alpine
 
 ARG BUILD_RFC3339="1970-01-01T00:00:00Z"
 ARG COMMIT="local"
-ARG VERSION="v2.4.0"
+ARG VERSION="v3.2.0"
 
 ENV GITHUB_USER="kgretzky"
 ENV EVILGINX_REPOSITORY="github.com/${GITHUB_USER}/evilginx2"
@@ -36,9 +36,9 @@ ARG VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE \
   org.label-schema.name="Evilginx2 Docker" \
   org.label-schema.description="Evilginx2 Docker Build" \
-  org.label-schema.url="https://github.com/war-horse/docker-evilginx2" \
+  org.label-schema.url="https://github.com/almart/docker-evilginx2" \
   org.label-schema.vcs-ref=$VCS_REF \
-  org.label-schema.vcs-url="https://github.com/war-horse/docker-evilginx2" \
+  org.label-schema.vcs-url="https://github.com/almart/docker-evilginx2" \
   org.label-schema.vendor="warhorse" \
   org.label-schema.version=$VERSION \
   org.label-schema.schema-version="1.0"
