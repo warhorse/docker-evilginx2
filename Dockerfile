@@ -8,7 +8,7 @@ ENV GITHUB_USER="kgretzky"
 ENV EVILGINX_REPOSITORY="github.com/${GITHUB_USER}/evilginx2"
 ENV INSTALL_PACKAGES="git make gcc musl-dev go"
 ENV PROJECT_DIR="${GOPATH}/src/${EVILGINX_REPOSITORY}"
-ENV EVILGINX_BIN="/bin/evilginx"
+ENV EVILGINX_BIN="/build/evilginx"
 
 RUN mkdir -p ${GOPATH}/src/github.com/${GITHUB_USER} \
     && apk add --no-cache ${INSTALL_PACKAGES} \
