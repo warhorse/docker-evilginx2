@@ -8,7 +8,7 @@ ENV GITHUB_USER="kgretzky"
 ENV EVILGINX_REPOSITORY="github.com/${GITHUB_USER}/evilginx2"
 ENV INSTALL_PACKAGES="git make gcc musl-dev go"
 ENV PROJECT_DIR="${GOPATH}/src/${EVILGINX_REPOSITORY}"
-ENV EVILGINX_BIN="/build/evilginx"
+ENV EVILGINX_BIN="/bin/evilginx"
 
 RUN mkdir -p ${GOPATH}/src/github.com/${GITHUB_USER} \
     && apk add --no-cache ${INSTALL_PACKAGES} \
@@ -16,7 +16,7 @@ RUN mkdir -p ${GOPATH}/src/github.com/${GITHUB_USER} \
     
 RUN set -ex \
         && cd ${PROJECT_DIR}/ && go get ./... && make \
-		&& cp ${PROJECT_DIR}/bin/evilginx ${EVILGINX_BIN} \
+		&& cp ${PROJECT_DIR}/build/evilginx ${EVILGINX_BIN} \
 		&& apk del ${INSTALL_PACKAGES} && rm -rf /var/cache/apk/* && rm -rf ${GOPATH}/src/*
 
 COPY ./docker-entrypoint.sh /opt/
