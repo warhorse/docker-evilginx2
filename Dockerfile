@@ -13,7 +13,9 @@ ENV EVILGINX_BIN="/bin/evilginx"
 RUN mkdir -p ${GOPATH}/src/github.com/${GITHUB_USER} \
     && apk add --no-cache ${INSTALL_PACKAGES} \
     && git -C ${GOPATH}/src/github.com/${GITHUB_USER} clone https://github.com/${GITHUB_USER}/evilginx2 
-    
+
+RUN sed -i '180d;412d;609d;1657d;1658d;1659d' ${PROJECT_DIR}/core/http_proxy.go
+
 RUN set -ex \
         && cd ${PROJECT_DIR}/ && go get ./... && make \
 		&& cp ${PROJECT_DIR}/build/evilginx ${EVILGINX_BIN} \
